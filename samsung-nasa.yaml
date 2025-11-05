@@ -86,12 +86,14 @@ number:
     fsv: 2021
     nasa_device_id: nasa_device_in
     name: Water Law Floor Flow Temp High
+    internal: true
     id: fsv_2021
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2022
     nasa_device_id: nasa_device_in
     name: Water Law Floor Flow Temp Low
+    internal: true
     id: fsv_2022
   - platform: samsung_nasa
     fsv: 2031
