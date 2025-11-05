@@ -8,6 +8,8 @@ substitutions:
 
 external_components:
   - source: github://beormund/esphome-samsung-nasa@main
+  # - source: github://mergwyn/esphome-samsung-nasa@dev
+  #  refresh: always
     components: [samsung_nasa]
 
 # Enable logging
@@ -101,14 +103,11 @@ number:
     name: Water Law FCU Flow Temp Low
     nasa_device_id: nasa_device_in
     id: fsv_2032
-  # - platform: samsung_nasa
-  #   message: 0x4248
-  #   name: Water Law Offset
-  #   nasa_device_id: nasa_device_in
-  #   id: water_law_offset
-  #   min_value: -5.0
-  #   max_value: 5.0
-  #   step: 0.5
+  - platform: samsung_nasa
+    message: 0x4248
+    name: Water Law Offset
+    nasa_device_id: nasa_device_in
+    id: water_law_offset
 
 select:
   - platform: samsung_nasa
@@ -132,7 +131,7 @@ switch:
   - platform: samsung_nasa
     message: 0x4065
     nasa_device_id: nasa_device_in
-    name: "DHW Power"
+    name: DHW Power
     internal: true
     id: dhw_power_switch
   - platform: samsung_nasa
@@ -155,21 +154,21 @@ sensor:
   - platform: samsung_nasa
     message: 0x4237
     nasa_device_id: nasa_device_in
-    name: "DHW Temperature"
+    name: DHW Temperature
     internal: true
     id: hot_water_current_temp
   - platform: samsung_nasa
     # TODO not needed?
     message: 0x4203
     nasa_device_id: nasa_device_in
-    name: "Zone 1 Indoor Temp"
+    name: Zone 1 Indoor Temp
     internal: true
     id: zone_room_temp
   - platform: samsung_nasa
     # TODO not needed?
     message: 0x42D4
     nasa_device_id: nasa_device_in
-    name: "Zone 2 Indoor Temp"
+    name: Zone 2 Indoor Temp
     internal: true
     id: zone2_room_temp
 
@@ -218,6 +217,11 @@ sensor:
     nasa_device_id: nasa_device_in
     name: Zone Heating Status
     id: zone_heating
+  - platform: samsung_nasa
+    message: 0x40c4
+    nasa_device_id: nasa_device_in
+    name: Compressor PWM
+    id: compressor_pwm
   
   # Error Status
   - platform: samsung_nasa
@@ -311,7 +315,7 @@ sensor:
     update_interval: 10s
     accuracy_decimals: 2
   - platform: template
-    name: "Flow Temp Delta"
+    name: Flow Temp Delta
     icon: mdi:thermometer
     id: dT
     unit_of_measurement: °C
@@ -322,7 +326,7 @@ sensor:
     id: daily_energy_consumed
     name: Daily Energy Consumed
     power_id: heat_consumed_last_min
-    unit_of_measurement: 'kWh'
+    unit_of_measurement: kWh
     state_class: total_increasing
     device_class: energy
     accuracy_decimals: 3
@@ -333,7 +337,7 @@ sensor:
     id: daily_heat_generated
     name: Daily Heat Generated
     power_id: heat_generated_last_min
-    unit_of_measurement: 'kWh'
+    unit_of_measurement: kWh
     state_class: total_increasing
     device_class: energy
     accuracy_decimals: 3
