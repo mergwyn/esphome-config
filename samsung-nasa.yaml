@@ -148,7 +148,7 @@ switch:
     message: 0x411E
     nasa_device_id: nasa_device_in
     name: Zone 2 Power
-    internal: false
+    internal: true
     id: zone2_power
 
 sensor:
@@ -252,11 +252,6 @@ sensor:
     nasa_device_id: nasa_device_in
     name: Power Produced Last Minute
     id: heat_generated_last_min
-  - platform: samsung_nasa
-    message: 0x4284
-    nasa_device_id: nasa_device_in
-    name: Indoor Power Consumed Last Min
-    id: indoor_power_consumed_last_min
 
   # Outdoor & Flow Temperatures
   - platform: samsung_nasa
