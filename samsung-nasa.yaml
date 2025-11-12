@@ -85,24 +85,24 @@ number:
     # TODO not needed?
     fsv: 2021
     nasa_device_id: nasa_device_in
-    name: Water Law Floor Flow Temp High
-    internal: true
+    name: Water Law WL1 Flow Temp High
+    internal: false
     id: fsv_2021
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2022
     nasa_device_id: nasa_device_in
-    name: Water Law Floor Flow Temp Low
-    internal: true
+    name: Water Law WL1 Flow Temp Low
+    internal: false
     id: fsv_2022
   - platform: samsung_nasa
     fsv: 2031
     nasa_device_id: nasa_device_in
-    name: Water Law FCU Flow Temp High
+    name: Water Law WL2 Flow Temp High
     id: fsv_2031
   - platform: samsung_nasa
     fsv: 2032
-    name: Water Law FCU Flow Temp Low
+    name: Water Law WL2 Flow Temp Low
     nasa_device_id: nasa_device_in
     id: fsv_2032
   - platform: samsung_nasa
@@ -118,6 +118,11 @@ select:
     name: Hot Water Mode
     id: hotwater_mode
   # Added
+  - platform: samsung_nasa
+    message: 0x4093
+    nasa_device_id: nasa_device_in
+    name: Water Law for Heating
+    id: water_law_mode
   - platform: samsung_nasa
     fsv: 2091
     name: External Thermostat Application (WL1)
