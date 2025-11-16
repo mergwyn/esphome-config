@@ -133,6 +133,11 @@ select:
     nasa_device_id: nasa_device_in
     name: External Thermostat Application (WL2)
     id: fsv_2092
+  - platform: samsung_nasa  # 4051
+    message: 0x40c2
+    nasa_device_id: nasa_device_in
+    name: Pump Application
+    id: pump_application
 
 switch:
   - platform: samsung_nasa
@@ -224,11 +229,6 @@ sensor:
     nasa_device_id: nasa_device_in
     name: Zone Heating Status
     id: zone_heating
-  - platform: samsung_nasa
-    message: 0x40c2
-    nasa_device_id: nasa_device_in
-    name: Pump Application
-    id: pump_application
   - platform: samsung_nasa
     message: 0x428a
     nasa_device_id: nasa_device_in
