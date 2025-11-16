@@ -111,15 +111,15 @@ number:
     nasa_device_id: nasa_device_in
     id: water_law_offset
   - platform: samsung_nasa
+    message: 0x428a  # 4052
+    nasa_device_id: nasa_device_in
+    name: Pump Target DeltaT
+    id: pump_target_deltat
+  - platform: samsung_nasa
     message: 0x40c3  # 4053
     nasa_device_id: nasa_device_in
     name: Pump Control Factor
     id: pump_control_factor
-  - platform: samsung_nasa
-    message: 0x40c4  # 4054
-    nasa_device_id: nasa_device_in
-    name: Compressor PWM
-    id: compressor_pwm
 
 select:
   - platform: samsung_nasa
@@ -240,10 +240,10 @@ sensor:
     name: Zone Heating Status
     id: zone_heating
   - platform: samsung_nasa
-    message: 0x428a
+    message: 0x40c4  # 4054
     nasa_device_id: nasa_device_in
-    name: Pump Target DeltaT
-    id: pump_target_deltat
+    name: Compressor PWM
+    id: compressor_pwm
 
   # Error Status
   - platform: samsung_nasa
