@@ -364,15 +364,21 @@ sensor:
 
 binary_sensor:
   - platform: samsung_nasa
+    message: 0x4028
+    nasa_device_id: nasa_device_in
+    name: Thermo Status
+    id: thermo_status
+  - platform: samsung_nasa
     message: 0x8010
     nasa_device_id: nasa_device_out
     name: Compressor Status
     id: compressor_status
   - platform: samsung_nasa
-    message: 0x4028
+    message: 0x8062
     nasa_device_id: nasa_device_in
-    name: Thermo Status
-    id: thermo_status
+    name:  Status Defrost
+    id: defrost_status
+
 
 climate:
   - platform: samsung_nasa
