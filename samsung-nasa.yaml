@@ -265,12 +265,12 @@ sensor:
   - platform: samsung_nasa
     message: 0x8413
     nasa_device_id: nasa_device_out
-    name: Power Consumed last Minute
+    name: Last Minute Power Consumed
     id: heat_consumed_last_min
   - platform: samsung_nasa
     message: 0x4426
     nasa_device_id: nasa_device_in
-    name: Power Produced Last Minute
+    name: Last Minute Heat Generated
     id: heat_generated_last_min
 
   # Outdoor & Flow Temperatures
