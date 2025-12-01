@@ -143,6 +143,11 @@ select:
     nasa_device_id: nasa_device_in
     name: External Thermostat Application (WL2)
     id: fsv_2092
+  - platform: samsung_nasa
+    fsv: 2093
+    nasa_device_id: nasa_device_in
+    name: Room Control
+    id: fsv_2093
   - platform: samsung_nasa  # 4051
     message: 0x40c2
     nasa_device_id: nasa_device_in
@@ -153,23 +158,23 @@ switch:
   - platform: samsung_nasa
     message: 0x4065
     nasa_device_id: nasa_device_in
-    name: DHW Power
-    internal: true
+    name: DHW Enable
+    internal: false
     id: dhw_power_switch
   - platform: samsung_nasa
     # TODO not needed?
     message: 0x4000
     nasa_device_id: nasa_device_in
-    name: Zone 1 Power
+    name: Heating Enable
     internal: false
     id: zone_power
-  - platform: samsung_nasa
-    # TODO not needed?
-    message: 0x411E
-    nasa_device_id: nasa_device_in
-    name: Zone 2 Power
-    internal: true
-    id: zone2_power
+# - platform: samsung_nasa
+#    # TODO not needed?
+#    message: 0x411E
+#    nasa_device_id: nasa_device_in
+#    name: Zone 2 Power
+#    internal: true
+#    id: zone2_power
 
 sensor:
   # Heating & DHW Temperatures
@@ -461,6 +466,7 @@ interval:
             - fsv_2032
             - fsv_2091
             - fsv_2092
+            - fsv_2093
 
 button:
   - platform: template
