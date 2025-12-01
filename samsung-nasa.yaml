@@ -72,6 +72,18 @@ number:
     nasa_device_id: nasa_device_in
     id: hot_water_target_temp
   - platform: samsung_nasa
+    fsv: 3022 # 0x4262
+    name: DHW Heat Stop Delta
+    internal: true
+    nasa_device_id: nasa_device_in
+    id: fsv_3022
+  - platform: samsung_nasa
+    fsv: 3023  # 0x4263
+    name: DHW Heat Start Delta
+    internal: true
+    nasa_device_id: nasa_device_in
+    id: fsv_3023
+  - platform: samsung_nasa
     fsv: 2011
     nasa_device_id: nasa_device_in
     name: Water Law Outdoor Temp High
@@ -86,14 +98,14 @@ number:
     fsv: 2021
     nasa_device_id: nasa_device_in
     name: Water Law WL1 Flow Temp High
-    internal: false
+    internal: true
     id: fsv_2021
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2022
     nasa_device_id: nasa_device_in
     name: Water Law WL1 Flow Temp Low
-    internal: false
+    internal: true
     id: fsv_2022
   - platform: samsung_nasa
     fsv: 2031
@@ -120,6 +132,7 @@ number:
     nasa_device_id: nasa_device_in
     name: Pump Control Factor
     id: pump_control_factor
+    # TODO need to make this an enum
 
 select:
   - platform: samsung_nasa
@@ -240,7 +253,7 @@ sensor:
   # Pin B22 is a command input (Command Signal Zone 1 Heating)
   # 0 = Off, 1 = Cool, 2 = Heat (from NASA docs)
   - platform: samsung_nasa
-    message: 0x4069
+    message: 0x4069  # TODO need to make this an enum
     nasa_device_id: nasa_device_in
     name: Zone Heating Status
     id: zone_heating
@@ -467,6 +480,8 @@ interval:
             - fsv_2091
             - fsv_2092
             - fsv_2093
+            - fsv_3022
+            - fsv_3023
 
 button:
   - platform: template
