@@ -68,19 +68,19 @@ number:
   - platform: samsung_nasa
     message: 0x4235
     name: DHW Target Temperature
-    internal: true
+    internal: false
     nasa_device_id: nasa_device_in
     id: hot_water_target_temp
   - platform: samsung_nasa
     fsv: 3022 # 0x4262
     name: DHW Heat Stop Delta
-    internal: true
+    internal: false
     nasa_device_id: nasa_device_in
     id: fsv_3022
   - platform: samsung_nasa
     fsv: 3023  # 0x4263
     name: DHW Heat Start Delta
-    internal: true
+    internal: false
     nasa_device_id: nasa_device_in
     id: fsv_3023
   - platform: samsung_nasa
@@ -98,14 +98,14 @@ number:
     fsv: 2021
     nasa_device_id: nasa_device_in
     name: Water Law WL1 Flow Temp High
-    internal: true
+    internal: false
     id: fsv_2021
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2022
     nasa_device_id: nasa_device_in
     name: Water Law WL1 Flow Temp Low
-    internal: true
+    internal: false
     id: fsv_2022
   - platform: samsung_nasa
     fsv: 2031
