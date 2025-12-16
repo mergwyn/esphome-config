@@ -1,7 +1,7 @@
 ---
 substitutions:
   name: m5atom-dev
-  friendly_name: ASHP
+  friendly_name: " "
 
 <<: !include .base.yaml
 <<: !include .base-atom.yaml
@@ -262,6 +262,15 @@ sensor:
     nasa_device_id: nasa_device_in
     name: Compressor PWM
     id: compressor_pwm
+  - platform: samsung_nasa
+    message: 0x8238
+    nasa_device_id: nasa_device_in
+    device_class: frequency
+    state_class: measurement
+    unit_of_measurement: Hz
+    accuracy_decimals: 1
+    name: Compressor Frequency
+    id: compressor_frequency
 
   # Error Status
   - platform: samsung_nasa
