@@ -409,7 +409,7 @@ binary_sensor:
     id: defrost_status
 
 climate:
-  - platform: samsung_ac
+  - platform: samsung_nasa
     id: samsung_monobloc            # Optional: Internal ID for lambda/script hooks
     name: "Samsung Heat Pump"       # Required: The name exposed to Home Assistant
     
