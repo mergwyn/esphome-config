@@ -40,10 +40,6 @@ samsung_nasa:
     - address: 10.00.00
       id: nasa_device_out
 
-:dd
-
-    # Thisexposes the raw register to your configuration
-
 number:
   - platform: samsung_nasa
     # TODO not needed?
