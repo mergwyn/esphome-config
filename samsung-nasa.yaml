@@ -431,15 +431,6 @@ climate:
     supports_fan_only: false        # Hides the fan-only UI mode (typical for heat pumps)
     supports_dry: false             # Hides dehumidification mode
     
-dd..    # --- Fan & Swing Modes (If your unit/controller supports them) ---
-    # Mostly used for Air-to-Air units, but can be declared or locked out
-    # supported_fan_modes:
-    #   - LOW
-    #   - MEDIUM
-    #   - HIGH
-    # supported_swing_modes:
-    #   - OFF
-    #   - VERTICAL
   - platform: samsung_nasa
     name: "Samsung Heat Pump"
     power_switch_id: nasa_power_switch
