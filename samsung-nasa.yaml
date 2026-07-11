@@ -169,7 +169,7 @@ select:
   
   - platform: samsung_nasa
     nasa_device_id: nasa_device_in
-    register: 0x4001
+    message: 0x4001
     id: nasa_mode_select
 
 
