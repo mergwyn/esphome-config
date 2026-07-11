@@ -409,6 +409,37 @@ binary_sensor:
     id: defrost_status
 
 climate:
+  - platform: samsung_ac
+    id: samsung_monobloc            # Optional: Internal ID for lambda/script hooks
+    name: "Samsung Heat Pump"       # Required: The name exposed to Home Assistant
+    
+    # --- NASA Protocol Address Mappings ---
+    address: "20.00.00"             # Required: The physical hex address discovered on the F1/F2 bus
+    # indoor_address: "20.00.00"    # Note: Depending on the fork version, used instead of 'address'
+    # outdoor_address: "10.00.00"   # Optional/Required if mapping directly to outdoor unit metrics
+
+    # --- Core Configuration Overrides ---
+    visual:
+      min_temperature: 10.0         # Optional: Lowest target allowed on the dashboard UI
+      max_temperature: 35.0         # Optional: Highest target allowed on the dashboard UI
+      temperature_step: 0.5         # Optional: Hardware steps for updating target temp
+
+    # --- Feature Exclusions / Support Flags ---
+    # Used to strip out AC features your underfloor/ASHP system doesn't physically have
+    supports_cool: true             # Enables cooling mode commands
+    supports_heat: true             # Enables heating mode commands
+    supports_fan_only: false        # Hides the fan-only UI mode (typical for heat pumps)
+    supports_dry: false             # Hides dehumidification mode
+    
+    # --- Fan & Swing Modes (If your unit/controller supports them) ---
+    # Mostly used for Air-to-Air units, but can be declared or locked out
+    # supported_fan_modes:
+    #   - LOW
+    #   - MEDIUM
+    #   - HIGH
+    # supported_swing_modes:
+    #   - OFF
+    #   - VERTICAL
   - platform: samsung_nasa
     name: "Samsung Heat Pump"
     power_switch_id: nasa_power_switch
