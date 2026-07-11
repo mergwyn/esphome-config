@@ -135,11 +135,11 @@ number:
     # TODO need to make this an enum
   - platform: samsung_nasa
     # TODO not needed?
-    fsv: 2021
+    fsv: 2051
     nasa_device_id: nasa_device_in
     name: Water Law WL1 Flow Temp High
     internal: false
-    id: fsv_2021
+    id: fsv_2051
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2022
