@@ -419,10 +419,7 @@ climate:
       - HEAT
       - COOL
     
-  - platform: samsung_nasa
-    name: "Samsung Heat Pump"
-    power_switch_id: nasa_power_switch
-    
+ 
 
 
   - platform: samsung_nasa
