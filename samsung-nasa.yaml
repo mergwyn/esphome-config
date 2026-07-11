@@ -415,10 +415,7 @@ binary_sensor:
 climate:
   - platform: samsung_nasa
     name: "Samsung Heat Pump"
-    # Links the climate card to the specific NASA register entities defined elsewhere in your YAML
-    power_switch_id: zone_power  # References your Register 0x4000 switch
-    mode_select_id: nasa_mode_select    # References your Register 0x4001 select component
-
+    samsung_nasa_device_id: your_monobloc_device
     # Modern version feature: filters out typical AC clutter so only what your ASHP supports shows in HA
     supported_modes:
       - HEAT
