@@ -166,6 +166,8 @@ select:
     nasa_device_id: nasa_device_in
     name: Pump Application
     id: pump_application
+  - platform: samsung_nasa
+    id: nasa_mode_select
 
 switch:
   - platform: samsung_nasa
