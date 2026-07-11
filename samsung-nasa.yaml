@@ -431,7 +431,7 @@ climate:
     supports_fan_only: false        # Hides the fan-only UI mode (typical for heat pumps)
     supports_dry: false             # Hides dehumidification mode
     
-    # --- Fan & Swing Modes (If your unit/controller supports them) ---
+dd..    # --- Fan & Swing Modes (If your unit/controller supports them) ---
     # Mostly used for Air-to-Air units, but can be declared or locked out
     # supported_fan_modes:
     #   - LOW
