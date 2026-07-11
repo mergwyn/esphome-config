@@ -133,7 +133,20 @@ number:
     name: Pump Control Factor
     id: pump_control_factor
     # TODO need to make this an enum
-  
+  - platform: samsung_nasa
+    # TODO not needed?
+    fsv: 2021
+    nasa_device_id: nasa_device_in
+    name: Water Law WL1 Flow Temp High
+    internal: false
+    id: fsv_2021
+  - platform: samsung_nasa
+    # TODO not needed?
+    fsv: 2022
+    nasa_device_id: nasa_device_in
+    name: Water Law WL1 Flow Temp Low
+    internal: false
+    id: fsv_2022
 
 select:
   - platform: samsung_nasa
