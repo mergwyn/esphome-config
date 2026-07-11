@@ -166,7 +166,7 @@ select:
     nasa_device_id: nasa_device_in
     name: Pump Application
     id: pump_application
-  select:
+  
   - platform: samsung_nasa
     nasa_device_id: nasa_device_in
     register: 0x4001
