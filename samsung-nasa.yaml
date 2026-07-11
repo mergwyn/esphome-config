@@ -413,7 +413,7 @@ binary_sensor:
     id: defrost_status
 
 climate:
-- platform: samsung_nasa
+  - platform: samsung_nasa
     name: "Samsung Heat Pump"
     # Links the climate card to the specific NASA register entities defined elsewhere in your YAML
     power_switch_id: zone_power  # References your Register 0x4000 switch
