@@ -415,7 +415,10 @@ binary_sensor:
 climate:
   - platform: samsung_nasa
     name: "Samsung Heat Pump"
-    device_id: nasa_device_in
+    power_switch_id: nasa_power_switch     
+    # NEW: The mode select (Register 0x4001)
+    # Linking this allows ESPHome to force the mode when turning on
+    mode_select_id: nasa_mode_select 
     # Modern version feature: filters out typical AC clutter so only what your ASHP supports shows in HA
     supported_modes:
       - HEAT
