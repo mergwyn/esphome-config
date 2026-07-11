@@ -433,14 +433,7 @@ climate:
     name: "Samsung Heat Pump"
     power_switch_id: nasa_power_switch
     
-    # Link the climate entity to the mode select register above
-    mode_select_id: nasa_mode_select  
-    
-    # Explicitly whitelist the modes you want visible in Home Assistant
-    supported_modes:
-      - HEAT
-      - COOL
-      - AUTO
+
 
   - platform: samsung_nasa
     name: Hot Water
