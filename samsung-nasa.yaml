@@ -137,7 +137,7 @@ number:
     # TODO not needed?
     fsv: 2051
     nasa_device_id: nasa_device_in
-    name: Water Law Cool Flow Temp High
+    name: Water Law Cool Outdoor Temp High
     internal: false
     id: fsv_2051
   - platform: samsung_nasa
