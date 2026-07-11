@@ -411,12 +411,6 @@ climate:
   - platform: samsung_nasa
     id: samsung_monobloc            # Optional: Internal ID for lambda/script hooks
     name: "Samsung Heat Pump"       # Required: The name exposed to Home Assistant
-    
-    # --- NASA Protocol Address Mappings ---
-    address: "20.00.00"             # Required: The physical hex address discovered on the F1/F2 bus
-    # indoor_address: "20.00.00"    # Note: Depending on the fork version, used instead of 'address'
-    # outdoor_address: "10.00.00"   # Optional/Required if mapping directly to outdoor unit metrics
-
     # --- Core Configuration Overrides ---
     visual:
       min_temperature: 10.0         # Optional: Lowest target allowed on the dashboard UI
