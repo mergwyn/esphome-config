@@ -422,7 +422,6 @@ climate:
       - COOL
       - AUTO
 
-climate:
   - platform: samsung_nasa
     name: Hot Water
     id: climate_hot_water
