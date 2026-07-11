@@ -146,7 +146,7 @@ number:
     nasa_device_id: nasa_device_in
     name: Water Law WL1 Flow Temp Low
     internal: false
-    id: fsv_2022
+    id: fsv_2052
 
 select:
   - platform: samsung_nasa
