@@ -424,8 +424,6 @@ climate:
       max_temperature: 35.0         # Optional: Highest target allowed on the dashboard UI
       temperature_step: 0.5         # Optional: Hardware steps for updating target temp
 
-    # --- Feature Exclusions / Support Flags ---
-    # Used to strip out AC features your underfloor/ASHP system doesn't physically have
     supports_cool: true             # Enables cooling mode commands
     supports_heat: true             # Enables heating mode commands
     supports_fan_only: false        # Hides the fan-only UI mode (typical for heat pumps)
