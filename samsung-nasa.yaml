@@ -133,6 +133,7 @@ number:
     name: Pump Control Factor
     id: pump_control_factor
     # TODO need to make this an enum
+  
 
 select:
   - platform: samsung_nasa
