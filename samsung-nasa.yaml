@@ -458,7 +458,7 @@ climate:
       - HEAT
       - COOL
     visual:
-      min_temperature: 30
+      min_temperature: 18
       max_temperature: 60
       temperature_step:
         target_temperature: 0.5
