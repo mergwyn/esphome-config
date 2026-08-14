@@ -457,9 +457,12 @@ climate:
     supported_modes:
       - HEAT
       - COOL
-    
- 
-
+    visual:
+      min_temperature: 30
+      max_temperature: 60
+      temperature_step:
+        target_temperature: 0.5
+        current_temperature: 0.1
 
   - platform: samsung_nasa
     name: Hot Water
