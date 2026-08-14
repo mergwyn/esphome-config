@@ -51,7 +51,6 @@ number:
   - platform: samsung_nasa
     message: 0x4247
     name: Water Outlet Target Temperature
-    internal: true
     nasa_device_id: nasa_device_in
     id: water_outlet_target_temperature
   - platform: samsung_nasa
