@@ -1,0 +1,38 @@
+
+name: esphome-check
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate dummy secrets
+        run: |
+          set -euo pipefail
+          # Valid base64 encoding of 32 bytes for ESPHome API encryption keys
+          dummy="MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE="
+
+          grep -rhoE '!secret +[A-Za-z0-9_]+' \
+            --include='*.yaml' --include='*.yml' . \
+            | awk '{print $2}' \
+            | sort -u \
+            | while read -r name; do
+                echo "${name}: \"${dummy}\""
+              done > secrets.yaml
+
+      - name: Validate ESPHome configurations
+        run: |
+          set -euo pipefail
+          for config in samsung-hvac-bus.yaml samsung-nasa.yaml; do
+            echo "::group::Validating ${config}"
+            docker run --rm \
+              -v "$PWD":/config \
+              -w /config \
+              ghcr.io/esphome/esphome:2025.10.0 \
+              config "${config}"
+            echo "::endgroup::"
+          done
