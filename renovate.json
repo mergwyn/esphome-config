@@ -5,7 +5,7 @@
     {
       "customType": "regex",
       "managerFilePatterns": [
-        "/(^|/)\\.github/workflows/esphome-check\\.ya?ml$/"
+        "/(^|/)\\.github/workflows/config-check\\.ya?ml$/"
       ],
       "matchStrings": [
         "ghcr\\.io/esphome/esphome:(?<currentValue>\\d+\\.\\d+\\.\\d+)"
