@@ -8,8 +8,8 @@ esphome:
 esp32:
   board: m5stack-atom
   framework:
-    # Arduino framework has faster compilation but 
-    # uses more RAM and Flash; ESP-IDF framework has 
+    # Arduino framework has faster compilation but
+    # uses more RAM and Flash; ESP-IDF framework has
     # slower compilation but uses less RAM and FLash
     type: esp-idf
     # type: arduino

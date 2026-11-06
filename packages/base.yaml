@@ -10,9 +10,6 @@ captive_portal:
 # Allow provisioning Wi-Fi via serial
 improv_serial:
 
-# Enable logging
-logger:
-
 # Enable Home Assistant API
 api:
 #   password: !secret_esphome_api_passsword

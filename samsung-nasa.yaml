@@ -3,8 +3,9 @@ substitutions:
   name: m5atom-dev
   friendly_name: " "
 
-<<: !include .base.yaml
-<<: !include .base-atom.yaml
+packages:
+  base: !include packages/base.yaml
+  atom: !include packages/hardware/m5atom.yaml
 
 external_components:
   - source: github://beormund/esphome-samsung-nasa@main
@@ -200,7 +201,7 @@ select:
     nasa_device_id: nasa_device_in
     name: Pump Application
     id: pump_application
-  
+
   - platform: samsung_nasa
     nasa_device_id: nasa_device_in
     message: 0x4001
@@ -449,11 +450,11 @@ binary_sensor:
 climate:
   - platform: samsung_nasa
     name: "Samsung Heat Pump"
-    power_switch_id: zone_power 
-    target_temp_number_id: water_outlet_target_temperature    
+    power_switch_id: zone_power
+    target_temp_number_id: water_outlet_target_temperature
     # NEW: The mode select (Register 0x4001)
     # Linking this allows ESPHome to force the mode when turning on
-    mode_select_id: nasa_mode_select 
+    mode_select_id: nasa_mode_select
     # Modern version feature: filters out typical AC clutter so only what your ASHP supports shows in HA
     supported_modes:
       - HEAT
