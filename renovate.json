@@ -17,7 +17,7 @@
     {
       "customType": "regex",
       "managerFilePatterns": [
-        "/^\\.base*\\.yaml$/"
+        "/^\\.base-atom\\.yaml$/"
       ],
       "matchStrings": [
         "min_version:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
