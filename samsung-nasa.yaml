@@ -187,7 +187,7 @@ select:
   - platform: samsung_nasa
     fsv: 2093
     nasa_device_id: nasa_device_in
-    name: Room Control
+    name: External Thermostat Application - Cooling
     id: fsv_2093
   - platform: samsung_nasa  # 4051
     message: 0x40c2
