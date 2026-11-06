@@ -13,17 +13,32 @@ jobs:
       - name: Generate dummy secrets
         run: |
           set -euo pipefail
-          # Valid base64 encoding of 32 bytes for ESPHome API encryption keys
-          dummy="MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE="
-
-          grep -rhoE '!secret +[A-Za-z0-9_]+' \
-            --include='*.yaml' --include='*.yml' . \
-            | awk '{print $2}' \
-            | sort -u \
-            | while read -r name; do
-                echo "${name}: \"${dummy}\""
-              done > secrets.yaml
-            cat secrets.yaml
+          while read -r name; do
+            case "$name" in
+              wifi_ssid)
+                value="Dummy-WiFi"
+                ;;
+              wifi_password)
+                value="dummy-wifi-password"
+                ;;
+              mqtt_user)
+                value="dummy-mqtt-user"
+                ;;
+              mqtt_password)
+                value="dummy-mqtt-password"
+                ;;
+              *)
+                value="dummy-secret"
+                ;;
+            esac
+          
+            echo "${name}: \"${value}\""
+          done < <(
+            grep -rhoE '!secret +[A-Za-z0-9_]+' \
+              --include='*.yaml' --include='*.yml' . |
+            awk '{print $2}' | sort -u
+          ) > secrets.yaml
+          cat secrets.yaml
 
       - name: Validate ESPHome configurations
         run: |
