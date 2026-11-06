@@ -1,7 +1,7 @@
 ---
 substitutions:
   name: m5atom-dev
-  friendly_name: " "
+  friendly_name: "ASHP"
 
 packages:
   base: !include packages/base.yaml
