@@ -53,7 +53,7 @@ number:
     name: Water Outlet Target Temperature
     internal: true
     nasa_device_id: nasa_device_in
-    id: heatpump_water_outlet_target_temperature
+    id: water_outlet_target_temperature
   - platform: samsung_nasa
     # TODO not needed?
     message: 0x42D6
