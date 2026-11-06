@@ -25,3 +25,4 @@ uart:
 time:
   - platform: homeassistant
     id: homeassistant_time
+    timezone: "Europe/London"

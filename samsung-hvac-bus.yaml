@@ -310,12 +310,6 @@ sensor:
       # Multiplication factor from W to kW is 0.001
       - multiply: 0.001
 
-# Enable time component to reset energy at midnight
-time:
-  - platform: homeassistant
-    id: homeassistant_time
-    timezone: "Europe/London"
-
 # number:
 #   - platform: template
 #     name: "Water Law Offset Number"
