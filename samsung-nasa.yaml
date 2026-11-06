@@ -449,7 +449,7 @@ climate:
   - platform: samsung_nasa
     name: "Samsung Heat Pump"
     power_switch_id: zone_power 
-    target_temp_number_id: zone_target_temp    
+    target_temp_number_id: water_outlet_target_temperature    
     # NEW: The mode select (Register 0x4001)
     # Linking this allows ESPHome to force the mode when turning on
     mode_select_id: nasa_mode_select 
