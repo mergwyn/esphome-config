@@ -23,6 +23,7 @@ jobs:
             | while read -r name; do
                 echo "${name}: \"${dummy}\""
               done > secrets.yaml
+            cat secrets.yaml
 
       - name: Validate ESPHome configurations
         run: |
