@@ -1,0 +1,29 @@
+
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^\\.github/workflows/esphome-check\\.ya?ml$/"
+      ],
+      "matchStrings": [
+        "ghcr\\.io/esphome/esphome:(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "ghcr.io/esphome/esphome",
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^\\.base\\.yaml$/"
+      ],
+      "matchStrings": [
+        "min_version:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "esphome",
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}
