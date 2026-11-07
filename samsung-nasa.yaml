@@ -278,9 +278,9 @@ sensor:
   - platform: samsung_nasa
     message: 0x4067
     nasa_device_id: nasa_device_in
-    name: 3-Way Valve
+    name: Hot Water Status
     internal: false
-    id: three_way_valve
+    id: hot_water_status
   # 0x4089
   # 0 = off; 1 =  on
   - platform: samsung_nasa
@@ -474,7 +474,7 @@ climate:
     target_temp_number_id: hot_water_target_temp
     custom_preset_select_id: hotwater_mode
     action_mode_sensor:
-      id: three_way_valve
+      id: hot_water_status
       mappings:
         0: CLIMATE_ACTION_IDLE
         1: CLIMATE_ACTION_HEATING
