@@ -8,7 +8,7 @@ import urllib.request
 import urllib.error
 
 # ==================== CONFIGURATION ====================
-OLLAMA_URL = "http://YOUR_LAN_OLLAMA_IP_HERE:11434/api/generate"  # 👈 Update with your LAN IP
+OLLAMA_URL = "http://mike.theclarkhome.com:11434/api/generate"  # 👈 Update with your LAN IP
 MODEL_NAME = "qwen2.5-coder:14b"
 # =======================================================
 
