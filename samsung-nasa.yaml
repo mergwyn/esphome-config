@@ -281,6 +281,12 @@ sensor:
     name: Hot Water Status
     internal: false
     id: hot_water_status
+  - platform: samsung_nasa
+    message: 0x4067
+    nasa_device_id: nasa_device_in
+    name: 3-Way Valve
+    internal: false
+    id: three_way_valve
   # 0x4089
   # 0 = off; 1 =  on
   - platform: samsung_nasa
