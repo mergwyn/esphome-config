@@ -37,9 +37,9 @@ samsung_nasa:
   nasa_client: {}
   devices:
     - address: 20.00.00
-      id: nasa_device_in
+      id: inside
     - address: 10.00.00
-      id: nasa_device_out
+      id: outside
 
 number:
   - platform: samsung_nasa
@@ -47,124 +47,124 @@ number:
     message: 0x4201
     name: Zone 1 Target Temp
     internal: true
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: zone_target_temp
   - platform: samsung_nasa
     message: 0x4247
     name: Water Outlet Target Temperature
     internal: true
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: water_outlet_target_temperature
   - platform: samsung_nasa
     # TODO not needed?
     message: 0x42D6
     name: Zone 2 Target Temp
     internal: true
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: zone2_target_temp
   - platform: samsung_nasa
     message: 0x4252
     name: DHW Max Temperature
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: hot_water_max_temp
   - platform: samsung_nasa
     message: 0x4253
     name: DHW Min Temperature
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: hot_water_min_temp
   - platform: samsung_nasa
     message: 0x4235
     name: DHW Target Temperature
     internal: false
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: hot_water_target_temp
   - platform: samsung_nasa
     fsv: 3022 # 0x4262
     name: DHW Heat Stop Delta
     internal: false
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: fsv_3022
   - platform: samsung_nasa
     fsv: 3023  # 0x4263
     name: DHW Heat Start Delta
     internal: false
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: fsv_3023
   - platform: samsung_nasa
     fsv: 2011
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Water Law Outdoor Temp High
     id: fsv_2011
   - platform: samsung_nasa
     fsv: 2012
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Water Law Outdoor Temp Low
     id: fsv_2012
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2021
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Water Law WL1 Flow Temp High
     internal: false
     id: fsv_2021
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2022
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Water Law WL1 Flow Temp Low
     internal: false
     id: fsv_2022
   - platform: samsung_nasa
     fsv: 2031
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Water Law WL2 Flow Temp High
     id: fsv_2031
   - platform: samsung_nasa
     fsv: 2032
     name: Water Law WL2 Flow Temp Low
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: fsv_2032
   - platform: samsung_nasa
     message: 0x4248
     name: Water Law Offset
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: water_law_offset
   - platform: samsung_nasa
     message: 0x428a  # 4052
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Pump Target DeltaT
     id: pump_target_deltat
   - platform: samsung_nasa
     message: 0x40c3  # 4053
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Pump Control Factor
     id: pump_control_factor
     # TODO need to make this an enum
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2051
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Water Law Cool Outdoor Temp Low
     internal: false
     id: fsv_2051
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2052
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Water Law Cool Outdoor Temp High
     internal: false
     id: fsv_2052
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2061
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Water Law Cool Flow Temp High
     internal: false
     id: fsv_2061
   - platform: samsung_nasa
     # TODO not needed?
     fsv: 2062
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Water Law Cool Flow Temp Low
     internal: false
     id: fsv_2062
@@ -172,38 +172,38 @@ number:
 select:
   - platform: samsung_nasa
     message: 0x4066
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Hot Water Mode
     id: hotwater_mode
   # Added
   - platform: samsung_nasa
     message: 0x4093
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Water Law for Heating
     id: water_law_mode
   - platform: samsung_nasa
     fsv: 2091
     name: External Thermostat Application (WL1)
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     id: fsv_2091
   - platform: samsung_nasa
     fsv: 2092
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: External Thermostat Application (WL2)
     id: fsv_2092
   - platform: samsung_nasa
     fsv: 2093
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: External Thermostat Application - Cooling
     id: fsv_2093
   - platform: samsung_nasa  # 4051
     message: 0x40c2
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Pump Application
     id: pump_application
 
   - platform: samsung_nasa
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     message: 0x4001
     id: nasa_mode_select
 
@@ -211,21 +211,21 @@ select:
 switch:
   - platform: samsung_nasa
     message: 0x4065
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: DHW Enable
     internal: false
     id: dhw_power_switch
   - platform: samsung_nasa
     # TODO not needed?
     message: 0x4000
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Heating Enable
     internal: false
     id: zone_power
 # - platform: samsung_nasa
 #    # TODO not needed?
 #    message: 0x411E
-#    nasa_device_id: nasa_device_in
+#    nasa_device_id: inside
 #    name: Zone 2 Power
 #    internal: true
 #    id: zone2_power
@@ -234,21 +234,21 @@ sensor:
   # Heating & DHW Temperatures
   - platform: samsung_nasa
     message: 0x4237
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: DHW Temperature
     internal: true
     id: hot_water_current_temp
   - platform: samsung_nasa
     # TODO not needed?
     message: 0x4203
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Zone 1 Indoor Temp
     internal: true
     id: zone_room_temp
   - platform: samsung_nasa
     # TODO not needed?
     message: 0x42D4
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Zone 2 Indoor Temp
     internal: true
     id: zone2_room_temp
@@ -269,7 +269,7 @@ sensor:
   #  B14  ON   ON   OFF  OFF
   - platform: samsung_nasa
     message: 0x408A
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: 2-Way Valve
     internal: true
     id: two_way_valve
@@ -277,13 +277,13 @@ sensor:
   # 0 = room; 1 = tank
   - platform: samsung_nasa
     message: 0x4067
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Hot Water Status
     internal: false
     id: hot_water_status
   - platform: samsung_nasa
     message: 0x4067
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: 3-Way Valve
     internal: false
     id: three_way_valve
@@ -291,7 +291,7 @@ sensor:
   # 0 = off; 1 =  on
   - platform: samsung_nasa
     message: 0x4089
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Primary Water Pump
     internal: false
     id: primary_water_pump
@@ -301,17 +301,17 @@ sensor:
   # 0 = Off, 1 = Cool, 2 = Heat (from NASA docs)
   - platform: samsung_nasa
     message: 0x4069  # TODO need to make this an enum
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Zone Heating Status
     id: zone_heating
   - platform: samsung_nasa
     message: 0x40c4  # 4054
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Compressor PWM
     id: compressor_pwm
   - platform: samsung_nasa
     message: 0x8238
-    nasa_device_id: nasa_device_out
+    nasa_device_id: outside
     device_class: frequency
     state_class: measurement
     unit_of_measurement: Hz
@@ -322,53 +322,53 @@ sensor:
   # Error Status
   - platform: samsung_nasa
     message: 0x8235
-    nasa_device_id: nasa_device_out
+    nasa_device_id: outside
     name: Error Code
 
   # Energy
   - platform: samsung_nasa
     message: 0x8414
-    nasa_device_id: nasa_device_out
+    nasa_device_id: outside
     name: Total Consumed Energy
     id: heat_pump_cumulative_energy
   - platform: samsung_nasa
     message: 0x4427
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Total Produced Energy
     id: heat_pump_produced_energy
   - platform: samsung_nasa
     message: 0x8413
-    nasa_device_id: nasa_device_out
+    nasa_device_id: outside
     name: Last Minute Power Consumed
     id: heat_consumed_last_min
   - platform: samsung_nasa
     message: 0x4426
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Last Minute Heat Generated
     id: heat_generated_last_min
 
   # Outdoor & Flow Temperatures
   - platform: samsung_nasa
     message: 0x8204
-    nasa_device_id: nasa_device_out
+    nasa_device_id: outside
     name: Outdoor Temperature
   - platform: samsung_nasa
     message: 0x42E9
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Flow Rate Sensor
   - platform: samsung_nasa
     message: 0x4238
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Flow Temp Out
     id: zone_flow_temp
   - platform: samsung_nasa
     message: 0x4236
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Flow Temp Return
     id: zone_flow_return_temp
   - platform: samsung_nasa
     message: 0x427F
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Flow Temp WL Target
     id: flow_temp_WL_target
 
@@ -439,19 +439,19 @@ sensor:
 binary_sensor:
   - platform: samsung_nasa
     message: 0x4028
-    nasa_device_id: nasa_device_in
+    nasa_device_id: inside
     name: Thermo Status
     id: thermo_status
   - platform: samsung_nasa
     message: 0x8010
-    nasa_device_id: nasa_device_out
+    nasa_device_id: outside
     name: Compressor Status
     id: compressor_status
   - platform: samsung_nasa
-    message: 0x8062
-    nasa_device_id: nasa_device_in
-    name:  Status Defrost
-    id: defrost_status
+    message: 0x8061
+    nasa_device_id: inside
+    name:  Outdoor Defrost Status
+    id: outdoor_defrost_status
 
 climate:
   - platform: samsung_nasa
