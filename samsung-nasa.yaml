@@ -311,7 +311,7 @@ sensor:
     id: compressor_pwm
   - platform: samsung_nasa
     message: 0x8238
-    nasa_device_id: nasa_device_in
+    nasa_device_id: nasa_device_out
     device_class: frequency
     state_class: measurement
     unit_of_measurement: Hz
