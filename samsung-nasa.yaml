@@ -450,8 +450,8 @@ binary_sensor:
   - platform: samsung_nasa
     message: 0x8061
     nasa_device_id: inside
-    name:  Outdoor Defrost Status
-    id: outdoor_defrost_status
+    name:  Defrost Status
+    id: defrost_status
 
 climate:
   - platform: samsung_nasa
