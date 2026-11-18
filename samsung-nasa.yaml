@@ -372,6 +372,7 @@ sensor:
     name: Flow Temp WL Target
     id: flow_temp_WL_target
 
+
   # Performance
   - platform: template
     name: COP - Total
@@ -452,6 +453,11 @@ binary_sensor:
     nasa_device_id: inside
     name:  Defrost Status
     id: defrost_status
+  - platform: samsung_nasa
+    message: 0x402E
+    nasa_device_id: inside
+    name: Defrost Active
+    id: defrost_active
 
 climate:
   - platform: samsung_nasa
