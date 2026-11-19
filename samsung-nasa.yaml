@@ -134,6 +134,7 @@ number:
     nasa_device_id: inside
     name: Pump Target DeltaT
     id: pump_target_deltat
+    entity_category: config
   - platform: samsung_nasa
     message: 0x40c3  # 4053
     nasa_device_id: inside
