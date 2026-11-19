@@ -11,8 +11,7 @@
         "ghcr\\.io/esphome/esphome:(?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
       "depNameTemplate": "ghcr.io/esphome/esphome",
-      "datasourceTemplate": "docker",
-      "groupName": "ESPHome"
+      "datasourceTemplate": "docker"
     },
     {
       "customType": "regex",
@@ -24,8 +23,7 @@
         "ghcr\\.io/esphome/esphome:(?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
       "depNameTemplate": "ghcr.io/esphome/esphome",
-      "datasourceTemplate": "docker",
-      "groupName": "ESPHome"
+      "datasourceTemplate": "docker"
     },
     {
       "customType": "regex",
@@ -36,8 +34,16 @@
         "min_version:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
       "depNameTemplate": "esphome/esphome",
-      "datasourceTemplate": "github-releases",
-      "groupName": "ESPHome"
+      "datasourceTemplate": "github-releases"
     }
-  ]
+  ],
+  "packageRules": [
+  {
+    "groupName": "ESPHome",
+    "matchPackageNames": [
+      "ghcr.io/esphome/esphome",
+      "esphome/esphome"
+    ]
+  }
+]
 }
