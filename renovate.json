@@ -12,7 +12,7 @@
       ],
       "depNameTemplate": "ghcr.io/esphome/esphome",
       "datasourceTemplate": "docker",
-      "groupNameTemplate": "ESPHome"
+      "groupName": "ESPHome"
     },
     {
       "customType": "regex",
@@ -25,7 +25,7 @@
       ],
       "depNameTemplate": "ghcr.io/esphome/esphome",
       "datasourceTemplate": "docker",
-      "groupNameTemplate": "ESPHome"
+      "groupName": "ESPHome"
     },
     {
       "customType": "regex",
@@ -36,7 +36,8 @@
         "min_version:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
       "depNameTemplate": "esphome/esphome",
-      "datasourceTemplate": "github-releases"
+      "datasourceTemplate": "github-releases".
+      "groupName": "ESPHome"
     }
   ]
 }
