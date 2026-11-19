@@ -11,7 +11,21 @@
         "ghcr\\.io/esphome/esphome:(?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
       "depNameTemplate": "ghcr.io/esphome/esphome",
-      "datasourceTemplate": "docker"
+      "datasourceTemplate": "docker",
+      "groupNameTemplate": "ESPHome"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        ".github/workflows/config-check.yaml",
+        ".github/workflows/config-check.yml"
+      ],
+      "matchStrings": [
+        "ghcr\\.io/esphome/esphome:(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "ghcr.io/esphome/esphome",
+      "datasourceTemplate": "docker",
+      "groupNameTemplate": "ESPHome"
     },
     {
       "customType": "regex",
