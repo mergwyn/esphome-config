@@ -36,7 +36,7 @@
         "min_version:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
       "depNameTemplate": "esphome/esphome",
-      "datasourceTemplate": "github-releases".
+      "datasourceTemplate": "github-releases",
       "groupName": "ESPHome"
     }
   ]
