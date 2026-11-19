@@ -16,7 +16,7 @@
     {
       "customType": "regex",
       "managerFilePatterns": [
-        "/(^|/)\\packages/**/*\\.yaml$/"
+        "packages/**/*.yaml"
       ],
       "matchStrings": [
         "min_version:\\s*(?<currentValue>\\d+\\.\\d+\\.\\d+)"
