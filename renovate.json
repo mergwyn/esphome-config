@@ -35,6 +35,17 @@
       ],
       "depNameTemplate": "esphome/esphome",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/\\.ya?ml$/"
+      ],
+      "matchStrings": [
+        "source:\\s*github://(?<depName>[^@\\s]+)@(?<currentValue>[^\\s#]+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "semver"
     }
   ],
   "packageRules": [
