@@ -128,6 +128,7 @@ number:
     name: Water Law Offset
     nasa_device_id: inside
     id: water_law_offset
+    entity_category: config
   - platform: samsung_nasa
     message: 0x428a  # 4052
     nasa_device_id: inside
