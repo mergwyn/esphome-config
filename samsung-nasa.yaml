@@ -227,7 +227,7 @@ switch:
     message: 0x411E
     nasa_device_id: inside
     name: Zone 2 Power
-    internal: true
+    internal: false
     id: zone2_power
 
 sensor:
