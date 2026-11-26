@@ -271,7 +271,7 @@ sensor:
     message: 0x408A
     nasa_device_id: inside
     name: 2-Way Valve
-    internal: true
+    internal: false
     id: two_way_valve
   # 0x4067
   # 0 = room; 1 = tank
