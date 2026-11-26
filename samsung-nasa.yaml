@@ -8,7 +8,8 @@ packages:
   atom: !include packages/hardware/m5atom.yaml
 
 external_components:
-  - source: github://beormund/esphome-samsung-nasa@2026.10.0  # use @main or @dev to get different versions
+  - source: github://beormund/esphome-samsung-nasa@main
+  # github://beormund/esphome-samsung-nasa@2026.10.0
   #  refresh: always
     components: [samsung_nasa]
 
@@ -498,45 +499,45 @@ climate:
         target_temperature: 0.5
         current_temperature: 0.1
 
-#  - platform: samsung_nasa
-#    name: Ground Floor Heating
-#    id: climate_ground_floor
-#    power_switch_id: zone_power
-#    current_temp_sensor_id: zone_room_temp
-#    target_temp_number_id: zone_target_temp
-#    action_mode_sensor:
-#      id: two_way_valve
-#      mappings:
-#        0: CLIMATE_ACTION_HEATING
-#        1: CLIMATE_ACTION_IDLE
-#        2: CLIMATE_ACTION_HEATING
-#        3: CLIMATE_ACTION_IDLE
-#    visual:
-#      min_temperature: 16
-#      max_temperature: 30
-#      temperature_step:
-#        target_temperature: 0.5
-#        current_temperature: 0.1
-#
-#  - platform: samsung_nasa
-#    name: First Floor Heating
-#    id: climate_first_floor
-#    power_switch_id: zone2_power
-#    current_temp_sensor_id: zone2_room_temp
-#    target_temp_number_id:  zone2_target_temp
-#    action_mode_sensor:
-#      id: two_way_valve
-#      mappings:
-#        0: CLIMATE_ACTION_HEATING
-#        1: CLIMATE_ACTION_HEATING
-#        2: CLIMATE_ACTION_IDLE
-#        3: CLIMATE_ACTION_IDLE
-#    visual:
-#      min_temperature: 16
-#      max_temperature: 30
-#      temperature_step:
-#        target_temperature: 0.5
-#        current_temperature: 0.1
+  - platform: samsung_nasa
+    name: Ground Floor Heating
+    id: climate_ground_floor
+    power_switch_id: zone_power
+    current_temp_sensor_id: zone_room_temp
+    target_temp_number_id: zone_target_temp
+    action_mode_sensor:
+      id: two_way_valve
+      mappings:
+        0: CLIMATE_ACTION_HEATING
+        1: CLIMATE_ACTION_IDLE
+        2: CLIMATE_ACTION_HEATING
+        3: CLIMATE_ACTION_IDLE
+    visual:
+      min_temperature: 16
+      max_temperature: 30
+      temperature_step:
+        target_temperature: 0.5
+        current_temperature: 0.1
+
+  - platform: samsung_nasa
+    name: First Floor Heating
+    id: climate_first_floor
+    power_switch_id: zone2_power
+    current_temp_sensor_id: zone2_room_temp
+    target_temp_number_id:  zone2_target_temp
+    action_mode_sensor:
+      id: two_way_valve
+      mappings:
+        0: CLIMATE_ACTION_HEATING
+        1: CLIMATE_ACTION_HEATING
+        2: CLIMATE_ACTION_IDLE
+        3: CLIMATE_ACTION_IDLE
+    visual:
+      min_temperature: 16
+      max_temperature: 30
+      temperature_step:
+        target_temperature: 0.5
+        current_temperature: 0.1
 
 interval:
   - interval: 30min
