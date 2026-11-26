@@ -130,16 +130,16 @@ number:
     id: water_law_offset
     entity_category: config
   - platform: samsung_nasa
-    message: 0x428a  # 4052
+    fsv: 4052
     nasa_device_id: inside
     name: Pump Target DeltaT
-    id: pump_target_deltat
+    id: fsv_4052
     entity_category: config
   - platform: samsung_nasa
-    message: 0x40c3  # 4053
+    fsv: 4053
     nasa_device_id: inside
     name: Pump Control Factor
-    id: pump_control_factor
+    id: fsv_4053
     # TODO need to make this an enum
   - platform: samsung_nasa
     # TODO not needed?
@@ -178,10 +178,10 @@ select:
     id: hotwater_mode
   # Added
   - platform: samsung_nasa
-    message: 0x4093
+    fsv: 2041
     nasa_device_id: inside
     name: Water Law for Heating
-    id: water_law_mode
+    id: fsv_2041
   - platform: samsung_nasa
     fsv: 2091
     name: External Thermostat Application (WL1)
